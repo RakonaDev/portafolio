@@ -250,7 +250,7 @@ function App() {
                 Proyecto personal que sirve para acortar un url y que se pueda compartir con otros. Este proyecto nació para poner en práctica mi lógica y aprender a usar springboot y angular.
               </p>
               <a
-                href="https://www.zai-tex.com/"
+                href="https://github.com/RakonaDev/shortUrl"
                 target="_blank"
                 className="text-light link-proyect"
               >
