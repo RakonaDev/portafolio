@@ -67,7 +67,7 @@ function App() {
             <span className="fs-6 text-light">Github</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/juan-carlos-cajas-a73a0b231/"
+            href="https://www.linkedin.com/in/juan-carlos-cajas-oca%C3%B1a-98426b2a2/"
             target="_blank"
             className="list-item d-flex gap-2 align-items-center justify-content-center"
           >
@@ -321,7 +321,7 @@ function App() {
                   Codigo
                 </a>
                 <a
-                  href="https://github.com/RakonaDev/decidijc"
+                  href="https://www.decidijc.com/"
                   target="_blank"
                   className="text-light link-proyect"
                 >
