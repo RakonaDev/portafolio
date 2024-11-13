@@ -5,15 +5,18 @@ import Zaitex from "./assets/zaitex-pantalla.png";
 import ShortUrl from "./assets/short-url.png";
 import Decidijc from "./assets/decidijc.png";
 
+import MiCV from "./assets/JuanCarlosCajas-CV.pdf";
 import React from "./assets/react.svg";
 import Php from "./assets/php_dark.svg";
 import Angular from "./assets/angular.svg";
 import Spring from "./assets/spring.svg";
 import Bootstrap from "./assets/bootstrap.svg";
 import Mysql from "./assets/mysql.svg";
-import email from "./services/emailjs";
+import Linux from './assets/linux.webp'
+import C_lenguaje from "./assets/c-lenguaje.png";
 import scroll from "./services/scroll";
 import { useEffect } from "react";
+import { ItemCertficaciones } from "./components/Item-Certificaciones/ItemCertficaciones";
 
 function App() {
 
@@ -35,7 +38,7 @@ function App() {
         <ul className="d-flex mt-3 list gap-5 p-3 rounded-4 fw-bold navbar-container" id="navbar">
           <li className="fs-6 list-item" onClick={() => scroll("sobre-mi")}>Sobre Mi</li>
           <li className="fs-6 list-item" onClick={() => scroll("proyectos")}>Proyectos</li>
-          <li className="fs-6 list-item" onClick={() => scroll("contacto")}>Contacto</li>
+          <li className="fs-6 list-item" onClick={() => scroll("contacto")}>Certificaciones</li>
         </ul>
       </header>
 
@@ -67,7 +70,7 @@ function App() {
             <span className="fs-6 text-light">Github</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/juan-carlos-cajas-oca%C3%B1a-98426b2a2/"
+            href="https://www.linkedin.com/in/juan-carlos-dev-98426b2a2/"
             target="_blank"
             className="list-item d-flex gap-2 align-items-center justify-content-center"
           >
@@ -81,11 +84,15 @@ function App() {
             <i className="fa-solid fa-envelope text-white fs-6"></i>
             <span className="text-light">Contáctame</span>
           </a>
+          <a href={MiCV} download='JuanCarlosCajas-CV.pdf' className="list-item d-flex gap-2 justify-content-center align-items-center">
+            <i className="fa-solid fa-file-download text-white fs-6"></i>
+            <span className="text-light">Descargar CV</span>
+          </a>
         </nav>
       </section>
 
       <main className="w-100" style={{ marginTop: "150px" }}>
-        <h1 className="fs-2 fw-bold text-primary">
+        <h1 className="fs-1 fw-bold text-primary">
           <span className="me-3">
             <i className="fa-solid fa-user-tie"></i>
           </span>
@@ -100,7 +107,7 @@ function App() {
           mi conocimiento y habilidades en el desarrollo web, y me interesa
           aprender nuevas tecnologías y metodologías para mejorar mi trabajo.
         </p>
-        <h1 className="fs-2 fw-bold mt-5 text-primary">
+        <h1 className="fs-1 fw-bold mt-5 text-primary">
           <span className="me-3">
             <i className="fa-solid fa-briefcase"></i>
           </span>
@@ -126,16 +133,17 @@ function App() {
         </ol>
       </main>
       <section className="pt-5" id="proyectos">
-        <h1 className="fs-2 fw-bold text-primary">
+        <h1 className="fs-1 fw-bold text-primary">
           <span className="me-3">
             <i className="fa-solid fa-code"></i>
           </span>
           Proyectos
         </h1>
         <ul className="mt-5 proyect-container">
+
           {/* ZaiTex */}
-          <li className="d-flex justify-content-evenly proyect-item flex-wrap">
-            <img src={Zaitex} alt="zaitex" className="proyecto-foto" />
+          <li className="d-flex justify-content-evenly gap-2 proyect-item flex-wrap">
+            <img src={Zaitex} alt="zaitex" className="proyecto-foto object-fit-contain" />
             <div className="proyect-body">
               <h3 className="fs-2 fw-bold">Zai-Tex</h3>
               <p className="text-light gap-1 d-flex flex-wrap">
@@ -199,8 +207,8 @@ function App() {
           </li>
 
           {/* Short Url */}
-          <li className="d-flex justify-content-evenly gap-4 proyect-item mt-4 flex-wrap">
-            <img src={ShortUrl} alt="zaitex" className="proyecto-foto" />
+          <li className="d-flex justify-content-evenly gap-2 proyect-item mt-4 flex-wrap">
+            <img src={ShortUrl} alt="zaitex" className="proyecto-foto object-fit-contain" />
             <div className="proyect-body">
               <h3 className="fs-2 fw-bold">Short Url</h3>
               <p className="text-light gap-1 d-flex flex-wrap">
@@ -263,8 +271,8 @@ function App() {
           </li>
 
           {/* DecidiJC */}
-          <li className="d-flex justify-content-evenly gap-4 proyect-item mt-4 flex-wrap">
-            <img src={Decidijc} alt="decidijc" className="proyecto-foto" />
+          <li className="d-flex justify-content-evenly gap-2 proyect-item mt-4 flex-wrap">
+            <img src={Decidijc} alt="decidijc" className="proyecto-foto object-fit-contain" />
             <div className="proyect-body">
               <h3 className="fs-2 fw-bold">DecidiJC</h3>
               <p className="text-light gap-1 d-flex flex-wrap">
@@ -336,29 +344,25 @@ function App() {
         </ul>
       </section>
       <section className="w-100 pt-5" id="contacto">
-        <h1 className="fs-2 fw-bold text-primary">
-          <span>
-            <i className="fa-solid fa-envelope me-3"></i>
-          </span>
-          Contacto
+        
+        <h1 className="text-primary fs-1 fw-bold">
+          <i className="fa-solid fa-book text-primary me-3"></i>
+          Certificaciones
         </h1>
-        <contacto className="mt-5 w-100 d-flex justify-content-center">
-          <form className="form-contact mt-3 p-4 rounded-3 d-flex flex-column align-items-center" onSubmit={(event) => email(event)}>
-            <div className="container">
-              <label htmlFor="email">Contacto: </label>
-              <input type="text" name="email" id="email" className="form-control-plaintext text-light" value="juancajas1905@gmail.com" readOnly/>
-            </div>
-            <div className="container mt-3">
-              <label htmlFor="gmail-contact" className="mb-2 fs-6">Email: </label>
-              <input type="email" name="gmail-name" id="gmail-contact" className="form-control" placeholder="ejemplo@gmail.com" required/>
-            </div>
-            <div className="container mt-3">
-              <label htmlFor="message" className="mb-2 fs-6">Mensaje: </label>
-              <textarea name="message" id="message" className="form-control" placeholder="Escribe aquí tu mensaje..." style={{ height: "170px", resize: "none" }} required></textarea>
-            </div>
-            <input type="submit" value="Enviar" className="btn btn-primary mt-4" onSubmit={(event) => email(event)}/>
-          </form>
-        </contacto>
+        <ul className="lista-certificaciones mt-5">
+          <ItemCertficaciones
+            img={Linux}
+            nombre="Linux Certificado - Cisco"
+            urlCertificado="https://drive.google.com/file/d/12PBf4Rtonr5mFNx-t9mwCJZgmz-2ugO1/view?usp=sharing"
+            descripcion="- Noviembre 2024"
+          />
+          <ItemCertficaciones
+            img={C_lenguaje}
+            nombre="C Lenguaje Certificado - Cisco"
+            descripcion="- Junio 2023"
+            urlCertificado="https://drive.google.com/file/d/19PRkPqtg-hhdoio-DSeNZ0k9pn1aSWHv/view?usp=sharing"
+          />
+        </ul>
       </section>
     </div>
     <footer className="mt-5 w-100 bg-black text-light footer-container">

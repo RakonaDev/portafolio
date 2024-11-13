@@ -130,7 +130,6 @@ ol, ul{
 
 .proyecto-foto{
   width: 420px;
-  max-width: 400px;
   height: 270px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px #000;
@@ -172,16 +171,23 @@ ol, ul{
   box-shadow: 0px 0px 15px 0px #000;
 }
 
+.lista-certificaciones{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
 .footer-container{
   .text-footer{
     height: 50px;
   }
 }
 
-
 @keyframes change-colors {
   from{
     color: #fff;
+    text-shadow: 0px 0px 40px #004ff9, 0px 0px 20px #fff, 0px 0px 30px #fff;
   }
   to{
     color: #aaaaaa;
