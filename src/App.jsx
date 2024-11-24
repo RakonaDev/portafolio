@@ -4,6 +4,7 @@ import Yo from "./assets/yo.jpg";
 import Zaitex from "./assets/zaitex-pantalla.png";
 import ShortUrl from "./assets/short-url.png";
 import Decidijc from "./assets/decidijc.png";
+import Raiki from "./assets/raiki.png";
 
 import MiCV from "./assets/JuanCarlosCajas-CV.pdf";
 import React from "./assets/react.svg";
@@ -195,6 +196,56 @@ function App() {
               </p>
               <a
                 href="https://www.zai-tex.com/"
+                target="_blank"
+                className="text-light link-proyect"
+              >
+                <span>
+                  <i className="fa-solid fa-link me-2"></i>
+                </span>{" "}
+                Preview
+              </a>
+            </div>
+          </li>
+
+          {/* Raiki */}
+          <li className="d-flex justify-content-evenly gap-2 mt-4 proyect-item flex-wrap">
+            <img src={Raiki} alt="raiki" className="proyecto-foto object-fit-cover" />
+            <div className="proyect-body">
+              <h3 className="fs-2 fw-bold">Raiki</h3>
+              <p className="text-light gap-1 d-flex flex-wrap">
+                <span
+                  style={{
+                    fontSize: "13px",
+                    background: "#000",
+                    padding: "8px",
+                  }}
+                  className="rounded-5 me-2"
+                >
+                  <img src={React} alt="react" className="logo-tec me-1" />
+                  <span className="align-middle">ReactJS</span>
+                </span>
+
+                <span
+                  style={{
+                    fontSize: "13px",
+                    background: "#000",
+                    padding: "8px",
+                  }}
+                  className="rounded-5"
+                >
+                  <img
+                    src={Bootstrap}
+                    alt="bootstrap"
+                    className="logo-tec me-1 align-middle"
+                  />
+                  <span className="align-middle">Bootstrap</span>
+                </span>
+              </p>
+              <p style={{ height: "110px" }}>
+                Landing Page para Raiki para mostrar los servicios de branding y diseño web que otorgan a los clientes. Construido con React y con constante mantenimiento.
+              </p>
+              <a
+                href="https://www.raikicor.com/"
                 target="_blank"
                 className="text-light link-proyect"
               >
