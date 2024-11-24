@@ -5,7 +5,7 @@ export function ItemCertficaciones({ img, nombre, urlCertificado, descripcion })
   return (
     <li className="item-certificaciones">
       <img src={img} alt="linux" className="logo-certificacion" />
-      <div className="my-auto">
+      <div className="my-auto body-certificaciones">
         <p className="text-light fs-3 fw-bold"> {nombre} </p>
         <p className="text-warning">{descripcion}</p>
         <a href={urlCertificado} className="btn-certificado" target="_blank">Mostrar Certificado</a> 
